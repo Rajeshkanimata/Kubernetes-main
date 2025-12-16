@@ -1,0 +1,53 @@
+--------------cluster creation-----------------
+
+first create a cluster with a custom configuration
+name ----  version----  node iam role--- which should be eks role attached here 
+
+-----use eksclusterpolicy for role
+
+
+now wait and let the cluster crate and then 
+
+------------node creation----------------
+
+>>go to compute  >>  node group 
+
+create a node group select all the requitred iam role and ec2 role to attach as nodes are ec2 instances 
+
+and then select vpc an dsubnets an dthe create and wait 
+
+select instance type for free tier only free toer eligible 
+
+this will create two instacce in ec2 and for more iam details open other file                             >>install.process<<
+
+-----------------------control client-server-------------------------------------
+
+craete ec2 instance and connect
+attach a role with clusterpolicy and eksworker node
+
+sudo su -
+
+aws configure and put credentials
+
+accesskey
+passkey
+region
+json
+
+use this command to install kubectl
+
+KUBECTL INSTALLATION----------------------------------------------------------------------------------------
+curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+
+chmod +x ./kubectl  -----Make the kubectl binary executable
+
+sudo mv ./kubectl /usr/local/bin/kubectl  ----sudo mv ./kubectl /usr/local/bin/kubectl
+KUBE CONFIG-----------------------------------------------------------------------------------------------------------
+run this to config
+
+aws eks update-kubeconfig --region us-east-1 --name rajesh
+
+aws eks update-kubeconfig --region <region> --name <cluster-name>
+
+
+
