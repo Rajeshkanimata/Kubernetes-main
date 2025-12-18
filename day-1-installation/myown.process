@@ -37,11 +37,14 @@ json
 use this command to install kubectl
 
 KUBECTL INSTALLATION----------------------------------------------------------------------------------------
+
+run each command seperately or combined but remove the right side description
+
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 
-chmod +x ./kubectl  -----Make the kubectl binary executable
+chmod +x ./kubectl                                                -----Make the kubectl binary executable
 
-sudo mv ./kubectl /usr/local/bin/kubectl  ----sudo mv ./kubectl /usr/local/bin/kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl                        ----sudo mv ./kubectl /usr/local/bin/kubectl
 KUBE CONFIG-----------------------------------------------------------------------------------------------------------
 run this to config
 
